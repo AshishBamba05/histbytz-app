@@ -71,7 +71,13 @@ button:focus-visible {
 /* Optional: Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
   body {
-  background: url('https://previews.123rf.com/images/jodimo/jodimo1309/jodimo130900006/22116342-highly-detailed-usa-map-with-the-us-flag-vintage-texture-and-displayed-states-borders.jpg'); /* replace with your path */
+ background-image: url('https://previews.123rf.com/images/jodimo/jodimo1309/jodimo130900006/22116342-highly-detailed-usa-map-with-the-us-flag-vintage-texture-and-displayed-states-borders.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+background-color: #1a1a1a;
+background-blend-mode: multiply;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
