@@ -1,49 +1,28 @@
-// src/App.jsx
-import EraView from './EraView';
+import HistBytz from './HistBytz';
 import { useEffect } from 'react';
 
 export default function App() {
-      useEffect(() => {
-    const canvas = document.getElementById("matrix-canvas");
-    const ctx = canvas.getContext("2d");
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const letters = "01";
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = "#0f0";
-      ctx.font = `${fontSize}px monospace`;
-
-      drops.forEach((y, i) => {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        const x = i * fontSize;
-        ctx.fillText(text, x, y * fontSize);
-
-        if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      });
-    };
-
-    const interval = setInterval(draw, 33);
-    return () => clearInterval(interval);
+  useEffect(() => {
+    document.body.style.backgroundColor = '#000000';
+    document.body.style.margin = 0;
+    document.body.style.fontFamily = 'Segoe UI, sans-serif';
+    document.body.style.color = '#f0f0f0';
   }, []);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <div style={{ flex: 1, overflowY: 'auto' }}>
-        <EraView />
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flexGrow: 1, padding: '2rem' }}>
+        <HistBytz />
       </div>
-      <div style={{ flex: 1, borderTop: '2px solid #333', padding: '1em', overflowY: 'auto' }}>
-        <JeffersonBot />
-      </div>
+      <footer style={{
+        textAlign: 'center',
+        padding: '1rem 0',
+        borderTop: '1px solid #1e293b',
+        fontSize: '0.9rem',
+        color: '#94a3b8',
+      }}>
+        Creator: Ashish V Bamba
+      </footer>
     </div>
   );
 }
