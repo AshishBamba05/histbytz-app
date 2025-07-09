@@ -1,6 +1,8 @@
 # React + Vite
 
-Web App: https://singular-pothos-162133.netlify.app
+Web App: [https://singular-pothos-162133.netlify.app](https://funny-chaja-32d458.netlify.app)
+
+For optimal experience, it is reccomended to use Google Chrome.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
