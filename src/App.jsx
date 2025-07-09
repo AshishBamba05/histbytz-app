@@ -10,6 +10,9 @@ export default function App() {
   }, []);
 
   return (
+     <>
+    <div className="slideshow-background"></div> {/* Background slideshow */}
+  
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div style={{ flexGrow: 1, padding: '2rem' }}>
         <HistBytz />
@@ -24,5 +27,6 @@ export default function App() {
         Creator: Ashish V Bamba
       </footer>
     </div>
+    </>   
   );
 }
