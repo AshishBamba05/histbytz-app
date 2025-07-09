@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 
 export default function App() {
   useEffect(() => {
-    document.body.style.backgroundColor = '#000000';
+    document.body.style.backgroundColor = '#000000'; 
     document.body.style.margin = 0;
     document.body.style.fontFamily = 'Segoe UI, sans-serif';
-    document.body.style.color = '#f0f0f0';
+    document.body.style.color = '#f0f0f0'; 
   }, []);
 
   return (
@@ -19,7 +19,7 @@ export default function App() {
         padding: '1rem 0',
         borderTop: '1px solid #1e293b',
         fontSize: '0.9rem',
-        color: '#94a3b8',
+        color: '#ffffff',
       }}>
         Creator: Ashish V Bamba
       </footer>
