@@ -1,74 +1,77 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import './index.css';
 
 export default function EraView() {
   const [dateInput, setDateInput] = useState('');
   const [keywordInput, setKeywordInput] = useState('');
-  const [narratives, setNarratives] = useState([]);
+  const [narratives, setNarratives] = useState([]); // filtered results
+  const [hasSearched, setHasSearched] = useState(false);
+
+  // Show all data by default
+  const allNarratives = [
+    ...Object.values(specificEvents),
+    ...generalPeriods.map(p => ({ title: p.title, narrative: p.narrative, image: p.image }))
+  ];
 
   const handleSubmit = () => {
-  const isDate = /^\d{4}-\d{2}-\d{2}$/.test(dateInput);
-  const matches = [];
+    setHasSearched(true);
+    const matches = [];
 
-  if (isDate) {
-    // Exact date match
-    Object.entries(specificEvents).forEach(([date, event]) => {
-      if (date === dateInput) {
-        matches.push(event);
+    const isDate = /^\d{4}-\d{2}-\d{2}$/.test(dateInput);
+    if (isDate) {
+      // Exact match
+      Object.entries(specificEvents).forEach(([date, event]) => {
+        if (date === dateInput) matches.push(event);
+      });
+
+      // Period match
+      const dateObj = new Date(dateInput);
+      generalPeriods.forEach(p => {
+        if (dateObj >= new Date(p.start) && dateObj <= new Date(p.end)) {
+          matches.push({ title: p.title, narrative: p.narrative, image: p.image });
+        }
+      });
+
+      if (matches.length > 0) {
+        setNarratives(matches);
+        return;
       }
-    });
-
-    // Date range (period match)
-    const dateObj = new Date(dateInput);
-    generalPeriods.forEach((p) => {
-      if (dateObj >= new Date(p.start) && dateObj <= new Date(p.end)) {
-        matches.push({ title: p.title, narrative: p.narrative, image: p.image });
-      }
-    });
-
-    if (matches.length > 0) {
-      setNarratives(matches);
-      return;
     }
-  }
 
-  // Keyword search
-  const keywordMatches = Object.values(specificEvents).filter(event =>
-    event.keywords?.some(kw =>
-      kw.toLowerCase().includes(keywordInput.toLowerCase())
-    )
-  ).concat(
-    generalPeriods.filter(p =>
-      p.keywords?.some(kw =>
+    // Keyword match
+    const keywordMatches = Object.values(specificEvents).filter(event =>
+      event.keywords?.some(kw =>
         kw.toLowerCase().includes(keywordInput.toLowerCase())
       )
-    ).map(p => ({ title: p.title, narrative: p.narrative, image: p.image }))
-  );
+    ).concat(
+      generalPeriods.filter(p =>
+        p.keywords?.some(kw =>
+          kw.toLowerCase().includes(keywordInput.toLowerCase())
+        )
+      ).map(p => ({ title: p.title, narrative: p.narrative, image: p.image }))
+    );
 
-  if (keywordMatches.length > 0) {
-    setNarratives(keywordMatches);
-    return;
-  }
+    if (keywordMatches.length > 0) {
+      setNarratives(keywordMatches);
+      return;
+    }
 
-  setNarratives([{
-    title: 'No Data Found',
-    narrative: "Sorry, we don't have a POV story for this date or topic yet.",
-  }]);
-};
+    setNarratives([]); // no matches
+  };
 
+  const displayList = hasSearched ? narratives : allNarratives;
 
   return (
     <div className="container">
       <div className="header" style={{ textAlign: 'center', marginBottom: '30px' }}>
-      <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '0.2em' }}>
-        Echoes of History
-      </h1>
-      <p style={{ fontSize: '1rem', color: '#ccc', marginTop: 0 }}>
+        <h1 className="flag-text">HistBytz</h1>
+        <p className="flag-text small-flag">
         Every era has a story—step into it. <br />
         Search a date. Enter the scene.
-      </p>
-    </div>
+        </p>
 
+      </div>
 
       <div style={{ marginBottom: '20px' }}>
         <input
@@ -87,13 +90,22 @@ export default function EraView() {
         <button onClick={handleSubmit}>See Scene</button>
       </div>
 
-      {narratives.length > 0 && narratives[0].title !== 'No Data Found' ? (
-        narratives.map((narrative, idx) => (
+      {displayList.length > 0 ? (
+        displayList.map((narrative, idx) => (
           <motion.div
             key={idx}
             className="story-card"
+            style={{
+              backgroundColor: '#1e293b',
+              padding: '1.5rem',
+              borderRadius: '12px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+              marginBottom: '1.5rem',
+              transition: 'transform 0.2s ease',
+            }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
           >
             <h2>{narrative.title}</h2>
@@ -115,15 +127,16 @@ export default function EraView() {
           </motion.div>
         ))
       ) : (
-        <div className="no-data">
-          <h2>No Data Found</h2>
-          <p>Sorry, we don't have a POV story for this date or topic yet.</p>
-        </div>
+        hasSearched && (
+          <div className="no-data">
+            <h2>No Data Found</h2>
+            <p>Sorry, we don't have a POV story for this date or topic yet.</p>
+          </div>
+        )
       )}
     </div>
   );
 }
-
 
 
 const specificEvents = {
@@ -233,7 +246,7 @@ const specificEvents = {
   title: 'Emancipation Proclamation Issued',
   narrative: "Lincoln signs the order. You're an enslaved person in the Confederacy, hearing whispers of freedom. Union soldiers carry copies. The proclamation doesn’t free everyone — but it's a turning point.",
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdR3q4w_Rr6OAdq7HQUQYuyWx6_1-1xl-bA&s',
-  keywords: ['emancipation', 'civil war', 'lincoln', 'union', 'slave', 'freedom']
+  keywords: ['emancipation proclaration', 'civil war', 'abraham lincoln', 'union', 'slave', 'freedom']
 },
 
 '1863-07-01': {
@@ -295,7 +308,7 @@ const specificEvents = {
   title: 'FDR’s First Inaugural Address',
   narrative: "March 4, 1933. You’re packed into the crowd in front of the U.S. Capitol. The country is paralyzed by bank failures, unemployment, and despair. Franklin D. Roosevelt takes the podium and declares: 'The only thing we have to fear is fear itself.' A wave of cautious hope ripples through the nation.",
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzTjaH-SWdB5Tz4F2MvxHFGNhQ11y6-LYQeQ&s',
-  keywords: ['fdr', 'roosevelt', 'first inaugural address', 'fear itself', 'great depression', '1933', 'hope', 'new deal']
+  keywords: ['fdr', 'franklin d roosevelt', 'first inaugural address', 'fear itself', 'great depression', '1933', 'hope', 'new deal']
  },
 
 
@@ -359,7 +372,7 @@ const specificEvents = {
   title: 'Assassination of President Kennedy',
   narrative: "November 22, 1963. You're on the streets of Dallas, Texas, as the presidential motorcade rolls by. Suddenly, shots ring out. Chaos erupts. President John F. Kennedy has been fatally shot—America is paralyzed by grief and disbelief.",
   image: 'https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/517330536_abkuba?_a=BAVAZGDX0',
-  keywords: ['JFK', 'Kennedy', 'Dallas', 'assassination']
+  keywords: ['JFK', 'John F. Kennedy', 'Dallas', 'assassination']
   },
 
   '1964-07-02': {
@@ -467,21 +480,21 @@ const generalPeriods = [
     end: '1830-05-27',
     title: 'Early National Expansion',
     narrative: "You're part of a young nation pushing westward—building canals, launching reform movements, and debating slavery’s future.",
-    keywords: ['expansion', 'westward', 'era of good feelings', 'monroe doctrine', 'manifest destiny']
+    keywords: ['expansion', 'westward', 'era of good feelings', 'monroe doctrine', 'manifest destiny', 'John Quincy Adams', 'JQA']
   },
   {
     start: '1830-05-28',
     end: '1838-12-31',
     title: 'Trail of Tears',
     narrative: "You're standing beside a caravan of Cherokee families in 1838, their belongings packed in wagons, their eyes hollow with exhaustion. The Indian Removal Act passed in 1830 set this cruel journey in motion. Now, under military escort, thousands are forced west from their ancestral lands in the Southeast to unfamiliar territory in Oklahoma. The cold bites, disease spreads, and children cry for water. Nearly a quarter will not survive. This is not migration — it's displacement, driven by politics, greed, and betrayal.",
-    keywords: ['indian removal act', 'andrew jackson', 'cherokee', 'relocation', 'oklahoma', 'manifest destiny']
+    keywords: ['indian removal act', 'andrew jackson', 'cherokee', 'relocation', 'oklahoma', 'manifest destiny', 'Trail Of Tears']
   },
   {
     start: '1839-01-01',
     end: '1846-04-24',
     title: 'Antebellum Expansion',
     narrative: "Railroads stretch west, cotton dominates the South, and reformers fight for temperance and abolition. Tensions build.",
-    keywords: ['antebellum', 'reform movements', 'texas annexation', 'slavery debate', 'manifest destiny', 'cotton']
+    keywords: ['antebellum', 'reform movements', 'texas annexation', 'slavery debate', 'manifest destiny', 'cotton', 'railroad', 'Frederick Douglass']
   },
   {
     start: '1846-04-25',
@@ -512,7 +525,7 @@ const generalPeriods = [
   end: '1860-11-05',
   title: 'Dred Scott and the Road to Secession',
   narrative: "The Supreme Court’s Dred Scott decision sends shockwaves through the nation, effectively denying Black people citizenship. Lincoln emerges on the national stage, and Southern states talk openly of secession.",
-  keywords: ['dred scott', 'lincoln', 'john brown', 'harpers ferry', 'secession']
+  keywords: ['dred scott', 'abraham lincoln', 'john brown', 'harpers ferry', 'secession']
 },
 
   {
@@ -520,42 +533,42 @@ const generalPeriods = [
     end: '1865-04-15',
     title: 'A Nation at War with Itself',
     narrative: "The country fractures overnight. States secede, brothers take up arms against each other, and blood soaks battlefields from Antietam to Gettysburg. You live in a time of letters and telegrams, rationed bread, and whispered hopes. Lincoln leads with steady resolve. By the end, slavery is abolished, but the scars run deep—and a president falls just as peace arrives.",
-    keywords: ['civil war', 'lincoln', 'emancipation proclamation', 'gettysburg', 'confederacy']
+    keywords: ['civil war', 'lincoln', 'emancipation proclamation', 'gettysburg', 'confederacy', 'confederates']
   },
   {
     start: '1865-04-16',
     end: '1877-03-04',
     title: 'Reconstruction Era',
     narrative: "Slavery ends but struggle begins. You're rebuilding lives, cities, and a shattered nation. Rights are gained—then stripped back.",
-    keywords: ['reconstruction', 'freedmen', '13th amendment', '14th amendment', '15th amendment']
+    keywords: ['reconstruction era', 'freedmen', '13th amendment', '14th amendment', '15th amendment', 'jim crow laws', 'kkk', 'ku klux klan', 'white supremacy', 'poll taxes', 'literacy tests']
   },
   {
     start: '1877-03-05',
     end: '1914-07-27',
     title: 'Industrial Gilded Age & Reform',
     narrative: "Smoke fills the sky as railroads, factories, and skyscrapers rise. You're part of a booming—and broken—industrial age.",
-    keywords: ['gilded age', 'robber barons', 'industrial revolution', 'labor unions', 'progressivism']
+    keywords: ['gilded age', 'robber barons', 'industrial revolution', 'labor unions', 'progressivism', 'railroad', 'rutherford b hayes']
   },
   {
   start: '1914-07-28',
   end: '1918-11-11',
   title: 'World War I',
   narrative: "You're in a muddy trench in France, surrounded by barbed wire, mustard gas, and the constant echo of artillery. The world is locked in a brutal conflict—'the war to end all wars.'",
-  keywords: ['ww1', 'trenches', 'allies', 'central powers', 'armistice', 'woodrow wilson', 'treaty of versailles']
+  keywords: ['ww1', 'trenches', 'allies', 'central powers', 'armistice', 'woodrow wilson', 'treaty of versailles', 'world war 1']
 },
 {
   start: '1929-10-29',
   end: '1939-09-01',
   title: 'The Great Depression',
   narrative: "You're standing in a breadline, coat pulled tight against the wind. Banks have collapsed, jobs are gone, and the American Dream feels like a ghost. But a radio crackles with Roosevelt’s voice—hope is still alive.",
-  keywords: ['great depression', 'stock market crash', 'dust bowl', 'roosevelt', 'new deal', 'hooverville']
+  keywords: ['great depression', 'stock market crash', 'dust bowl', 'franklin d roosevelt', 'new deal', 'hooverville', 'herbert hoover']
 },
 {
   start: '1939-09-01',
   end: '1945-09-02',
   title: 'World War II',
   narrative: "You’re watching the skies darken as war erupts again. Rations, draft cards, and radio bulletins become daily life. From Pearl Harbor to D-Day, the world fights to decide its future.",
-  keywords: ['ww2', 'hitler', 'd-day', 'pearl harbor', 'holocaust', 'allies', 'axis', 'atomic bomb']
+  keywords: ['ww2', 'hitler', 'd-day', 'pearl harbor', 'holocaust', 'allies', 'axis', 'atomic bomb', 'world war 2', 'japanese internment camps', 'franklin d roosevelt']
 },
 
 {
@@ -571,7 +584,7 @@ const generalPeriods = [
   end: '1964-12-31',
   title: 'Brinkmanship Abroad, Struggle at Home',
   narrative: "The U.S. stares down nuclear war abroad—Sputnik orbits overhead, Kennedy defuses Cuba—but at home, America simmers. Black Americans march, sit-in, and fight for civil rights, while the country edges toward reckoning.",
-  keywords: ['cuban missile crisis', 'kennedy', 'sputnik', 'bay of pigs', 'civil rights', 'freedom rides', 'cold war']
+  keywords: ['cuban missile crisis', 'john f kennedy', 'sputnik', 'bay of pigs', 'civil rights', 'freedom rides', 'cold war']
 },
 
 {
@@ -579,7 +592,7 @@ const generalPeriods = [
   end: '1975-04-30',
   title: 'Vietnam, Protest, and the Great Society',
   narrative: "In Vietnam, war rages. At home, cities burn after MLK's assassination. LBJ launches the Great Society—Medicare, education, civil rights—while anti-war protests erupt and distrust in government surges.",
-  keywords: ['vietnam war', 'great society', 'civil rights', 'mlk', 'lbj', 'medicare', 'protests', 'cold war']
+  keywords: ['vietnam war', 'great society', 'civil rights', 'mlk', 'lbj', 'medicare', 'protests', 'cold war', 'lyndon b johnson', 'martin luther king jr.']
 },
 
   {
@@ -587,14 +600,14 @@ const generalPeriods = [
     end: '2000-12-31',
     title: 'Post-War America',
     narrative: "You're in the golden age of suburbia, Cold War paranoia, and space race ambition. You might be dancing to Elvis, ducking under desks, or building dot-com dreams.",
-    keywords: ['cold war', 'civil rights', 'moon landing', 'reagan', 'tech boom']
+    keywords: ['cold war', 'civil rights', 'moon landing', 'ronald reagan', 'tech boom']
   },
   {
     start: '2001-01-01',
     end: '2020-03-11',
     title: 'Early 21st Century America',
     narrative: "You scroll through early smartphones, survive economic crashes, and watch the digital world reshape everything. Facebook is new. The world feels small, fast, and full of possibilities.",
-    keywords: ['9/11', 'iraq war', 'obama', 'recession', 'technology']
+    keywords: ['9/11', 'iraq war', 'obama', 'recession', 'technology', 'bush']
   },
   {
     start: '2020-03-12',
@@ -611,4 +624,3 @@ const generalPeriods = [
     keywords: ['post-covid', 'ukraine', 'ai', 'inflation', '2020s']
   }
 ];
-
