@@ -1,8 +1,12 @@
-# React + Vite
+# HistBytz
 
-Web App: [https://funny-chaja-32d458.netlify.app](https://funny-chaja-32d458.netlify.app)
+   Web App: [HistBytz](https://funny-chaja-32d458.netlify.app)
 
-For optimal experience, it is reccomended to use Google Chrome.
+  For optimal experience, it is reccomended to use Google Chrome.
+
+
+
+## Vite & React
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
