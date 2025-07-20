@@ -1,8 +1,12 @@
 # HistBytz
 
-   Web App: [HistBytz](https://funny-chaja-32d458.netlify.app)
+  Web App: [HistBytz](https://funny-chaja-32d458.netlify.app)
 
   For optimal experience, it is reccomended to use Google Chrome.
+
+## How It Works
+
+
 
 
 
