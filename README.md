@@ -6,7 +6,7 @@
 
 ## How It Works
 
-
+The web app contains 2 search engines with different filters - one for words, and one for dates. A user can use **either one** of 2 search engines and my web app will map it to the most relevant general time period + specific event in US History.
 
 
 
