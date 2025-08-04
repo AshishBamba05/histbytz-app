@@ -1,24 +1,101 @@
-# HistBytz
+# 🕰️ HistBytz
 
-  Web App: [HistBytz](https://abamba-histbytz.netlify.app)
+**Interactive Timeline Explorer for U.S. History**
 
-  For optimal experience, it is reccomended to use Google Chrome.
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+🔗 **Live App:** [HistBytz](#)  
+> 💡 For best performance, we recommend using **Google Chrome**.
 
-## How It Works
+---
 
-The web app contains 2 search engines with different filters - one for words, and one for dates. A user can use **either one** of 2 search engines and my web app will map it to the most relevant general time period + specific event in US History.
+## 📌 Overview
 
+**HistBytz** is a React + Vite web app that helps users explore key events in U.S. history. Users can search using:
 
+- 🔤 **Keyword search**: e.g., "civil rights", "World War"
+- 📅 **Date search**: e.g., "1776", "1960s"
 
-## Vite & React
+The app maps your input to a **relevant historical period** and a **specific U.S. event**, providing clear, concise context.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🎯 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧠 Intelligent search by word or date
+- 📆 Mapped to both general era + specific event
+- ⚡ Fast and lightweight UI powered by Vite + React
+- 🧭 Educational for students, teachers, and trivia lovers
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Tech Stack
+
+| Layer        | Technology         |
+|--------------|--------------------|
+| Frontend     | React + Vite       |
+| Styling      | Tailwind CSS *(or specify)* |
+| Dev Tools    | ESLint, Babel / SWC |
+| Backend (Planned) | MongoDB (for dynamic event storage) |
+
+---
+
+## 🚀 How It Works
+
+1. The app has **two search engines**:
+   - One for **keywords**
+   - One for **dates**
+2. The search input is mapped to:
+   - A **broad U.S. time period**
+   - A **specific historical event**
+3. The result includes:
+   - Event name
+   - Year
+   - Brief description
+   - Contextual notes
+
+---
+
+## 🧩 Vite + React Setup
+
+This project uses [Vite](https://vitejs.dev/) for blazing-fast dev with HMR.
+
+### 🔌 Plugins Used
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) (Babel-based)
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) (SWC-based)
+
+Both support **Fast Refresh** during development.
+
+---
+
+## ✅ Linting & TypeScript Support
+
+If you're using TypeScript:
+
+- Use [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) for **type-aware linting**
+- Template to get started: [React TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
+
+---
+
+## 🖥️ Screenshots
+
+| Home Page | Search Result |
+|-----------|----------------|
+| ![Home Screenshot](./assets/home.png) | ![Result Screenshot](./assets/result.png) |
+
+> Replace `./assets/home.png` and `./assets/result.png` with your actual image paths
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone repo
+git clone https://github.com/your-username/histbytz.git
+cd histbytz
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
