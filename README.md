@@ -13,7 +13,7 @@
 **HistBytz** is a React + Vite web app that helps users explore key events in U.S. history. Users can search using:
 
 - 🔤 **Keyword search**: e.g., "civil rights", "World War"
-- 📅 **Date search**: e.g., "1776", "1960s"
+- 📅 **Date search**: e.g., "7/4/1776", "1960s"
 
 The app maps your input to a **relevant historical period** and a **specific U.S. event**, providing clear, concise context.
 
