@@ -3,7 +3,7 @@
 **Interactive Timeline Explorer for U.S. History**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-🔗 **Live App:** [HistBytz](#)  
+🔗 **Live App:** [HistBytz](https://abamba-histbytz.netlify.app)  
 > 💡 For best performance, we recommend using **Google Chrome**.
 
 ---
