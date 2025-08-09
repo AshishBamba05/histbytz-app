@@ -66,29 +66,28 @@ export default function EraView() {
     <div className="container">
       <div className="header" style={{ textAlign: 'center', marginBottom: '30px' }}>
         <h1 className="flag-text">HistBytz</h1>
-        <p className="flag-text small-flag">
+        <p className="small-flag">
         Every era has a story—step into it. <br />
         Search a date. Enter the scene.
         </p>
 
       </div>
 
-      <div style={{ marginBottom: '20px' }}>
-        <input
-          type="date"
-          value={dateInput}
-          onChange={(e) => setDateInput(e.target.value)}
-          style={{ marginRight: '10px', padding: '0.5em', width: '200px' }}
-        />
-        <input
-          type="text"
-          placeholder="Search topic (e.g., Lincoln, WW2)"
-          value={keywordInput}
-          onChange={(e) => setKeywordInput(e.target.value)}
-          style={{ marginRight: '10px', padding: '0.5em', width: '300px' }}
-        />
-        <button onClick={handleSubmit}>See Scene</button>
+      <div className="search-bar">
+      <input
+        type="date"
+        value={dateInput}
+        onChange={(e) => setDateInput(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Search topic (e.g., Lincoln, WW2)"
+        value={keywordInput}
+        onChange={(e) => setKeywordInput(e.target.value)}
+      />
+      <button onClick={handleSubmit}>See Scene</button>
       </div>
+
 
       {displayList.length > 0 ? (
         displayList.map((narrative, idx) => (
