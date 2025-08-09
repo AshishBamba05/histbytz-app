@@ -10,29 +10,31 @@ body {
   min-height: 100vh;
 }
 
-@keyframes backgroundSlideshow {
-  0%   { background-image: url('/ConstitutionRes.png'); }
-  25%  { background-image: url('/louRes.jpeg'); }
-  50%  { background-image: url('/moonRes.jpeg'); }
-  75%  { background-image: url('/warRes.png'); }
-  100% { background-image: url('/mlkRes.png'); }
-}
-
+/* Base */
 .slideshow-background {
-  animation: backgroundSlideshow 20s infinite;
-  background-size: cover;
+  background-image: url('/chatgpt image.png');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
+  background-size: cover;
+  background-attachment: scroll;   /* mobile-safe */
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;                        /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100dvh;                  /* better than 100vh on mobile */
   z-index: -1;
 }
 
-
+/* Mobile: show the whole image (shrink balls) */
+@media (max-width: 768px) {
+  .slideshow-background {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: #000;        /* fills the bars */
+    background-attachment: scroll !important;
+    height: 100dvh !important;
+  }
+}
 
 input, button {
   font-family: inherit;
