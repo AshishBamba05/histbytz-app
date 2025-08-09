@@ -1,56 +1,48 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
- /* background-image: url('/parchment.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
- */background-attachment: fixed;
-  color: #111; /* slightly darker text for contrast on parchment */
-  min-height: 100vh;
+/* === Text & header on top === */
+header, .header, .site-title, h1, .subtitle, .tagline, .search-instructions {
+  position: relative;
+  z-index: 1;               /* above bg */
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
 }
+header a, .header a { color: #fff; text-decoration: none; }
 
-/* Base */
-.slideshow-background {
-  background-image: url('/chatgpt image.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;   /* mobile-safe */
+html, body { height: 100%; margin: 0; background:#000; }
+
+body::before {
+  content: "";
   position: fixed;
-  inset: 0;                        /* top:0; right:0; bottom:0; left:0 */
-  width: 100%;
-  height: 100dvh;                  /* better than 100vh on mobile */
-  z-index: -1;
+  inset: 0;
+  z-index: 0;                 
+  pointer-events: none;
+  background-image: url('/background.png');  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;      
 }
 
-/* Mobile: show the whole image (shrink balls) */
+/* ensure app sits above the bg */
+#app, header, main, .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* optional: show whole image on phones */
 @media (max-width: 768px) {
-  .slideshow-background {
-    background-size: contain !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-color: #000;        /* fills the bars */
-    background-attachment: scroll !important;
-    height: 100dvh !important;
+  body::before {
+    background-size: contain;
+    background-color: #000;
   }
 }
 
-input, button {
-  font-family: inherit;
-}
 
-::selection {
-  background: #60a5fa;
-  color: #fff;
-}
-
+/* Flag text */
 .flag-text {
-  background: url('/src/assets/flag.gif') repeat;
+  background: url('/flag.gif') repeat;
   background-size: 200%;
   background-position: 0% 50%;
-  background-clip: text;  
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   font-size: 3rem;
@@ -58,52 +50,101 @@ input, button {
 }
 
 .subtitle {
-  color: rgba(240, 240, 240, 0.85);
+  color: rgba(240,240,240,0.9);
   font-size: 1.1rem;
   margin-top: 0;
   text-align: center;
 }
 
-@keyframes flagWave {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
+/* Cards */
 @keyframes diagonalFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, -10px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(0,0); }
+  50% { transform: translate(10px,-10px); }
+  100% { transform: translate(0,0); }
 }
-
 .story-card {
-   animation: diagonalFloat 6s ease-in-out infinite;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-              0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: diagonalFloat 6s ease-in-out infinite;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05),
+              0 8px 20px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
-
-.story-card:hover {
-  transform: translateY(-4px);
-}
+.story-card:hover { transform: translateY(-4px); }
 
 .small-flag {
   font-size: 1rem;
-  font-weight: 500;
-  background: url('/src/assets/flag.gif') repeat;
+  font-weight: 700;
+  background: url('/flag.gif') repeat;
   background-size: 300%;
   background-position: 0% 50%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: flagWave 5s linear infinite;
 }
 
+/* Inputs */
+input, button { font-family: inherit; }
 input:focus {
   outline: none;
   border: 2px solid #60a5fa;
   box-shadow: 0 0 4px rgba(96,165,250,0.5);
 }
+::selection { background: #60a5fa; color: #fff; }
+
+/* Animations */
+@keyframes flagWave {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+/* Keep the flag effect ONLY on the title/taglines, not on form controls */
+.flag-text input,
+.flag-text button,
+.flag-text .search-bar,
+.flag-text .search-bar * {
+  -webkit-text-fill-color: initial !important;
+  color: #111 !important;
+  background: initial !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+/* Make the search bar visible and above bg */
+.search-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 720px;
+  margin: 12px auto 0;
+  padding: 6px;
+  background: rgba(0,0,0,0.35);   /* subtle contrast over image */
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="date"] {
+  flex: 1 1 auto;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #9aa4b2;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+
+.search-bar button {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #9aa4b2;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #111;
+  cursor: pointer;
+}
+.search-bar button:hover { filter: brightness(0.95); }
+
