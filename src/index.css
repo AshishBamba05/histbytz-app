@@ -15,7 +15,7 @@ body::before {
   inset: 0;
   z-index: 0;                 
   pointer-events: none;
-  background-image: url('/background.png');  
+  background-image: url('/bg.png');  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;      
@@ -72,7 +72,7 @@ body::before {
 
 .small-flag {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   background: url('/flag.gif') repeat;
   background-size: 300%;
   background-position: 0% 50%;
