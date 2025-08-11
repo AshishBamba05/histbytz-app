@@ -65,7 +65,7 @@ export default function App() {
         <footer style={footerStyle}>
   Creator: Ashish V Bamba | 
   <a href="mailto:ashishvbamba@gmail.com" style={linkStyle}>Email</a> | 
-  <a href="https://github.com/AshishBamba05" style={linkStyle}>GitHub</a> | 
+  <a href="https://github.com/AshishBamba05/histbytz-app" style={linkStyle}>GitHub</a> | 
   <a href="https://linkedin.com/in/ashishbamba" style={linkStyle}>LinkedIn</a>
 </footer>
 
