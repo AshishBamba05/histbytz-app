@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+footer a:hover {
+  color: #00aced; /* matches the linkHoverStyle color */
+}
+
