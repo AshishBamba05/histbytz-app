@@ -3,15 +3,14 @@
 **Interactive Timeline Explorer for U.S. History**
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-🔗 **Live App:** [HistBytz](https://abamba-histbytz.netlify.app)  
+🔗 **Live App:** [HistBytz](https://ashishvbamba-histbytz.netlify.app)  
 > 💡 For best performance, we recommend using **Google Chrome**.
 
 ---
 
 ## 📌 Overview
 
-**HistBytz** is a React + Vite web app that helps users explore key events in U.S. history. Users can search using:
-
+**HistBytz** is a full-stack interactive history explorer built with React + Vite on the frontend and Node.js + Express on the backend. Users can search historical events by keyword or date, and the backend dynamically retrieves matching results from a JSON database.
 - 🔤 **Keyword search**: e.g., "civil rights", "World War"
 - 📅 **Date search**: e.g., "7/4/1776", "1960s"
 
@@ -22,8 +21,9 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 ## 🎯 Features
 
 - 🧠 Intelligent search by word or date
-- 📆 Mapped to both general era + specific event
-- ⚡ Fast and lightweight UI powered by Vite + React
+- 📆 Mapped to both general historical era + specific event
+- ⚡ Fast, lightweight UI with Vite + React
+- 🗄️ Dynamic event retrieval from JSON via Express API
 - 🧭 Educational for students, teachers, and trivia lovers
 
 ---
@@ -33,10 +33,13 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 | Layer        | Technology         |
 |--------------|--------------------|
 | Frontend     | React + Vite       |
-| Styling      | Tailwind CSS *(or specify)* |
-| Dev Tools    | ESLint, Babel / SWC |
-| Backend (Planned) | MongoDB (for dynamic event storage) |
+| Styling      | HTML/CSS           |
+| Backend      | Node.js + Express  |
+| Database     | JSON               |
 
+
+
+Dev Tools	ESLint, Babel / SWC
 ---
 
 ## 🚀 How It Works
@@ -81,9 +84,7 @@ If you're using TypeScript:
 
 | Home Page | Search Result |
 |-----------|----------------|
-| ![Home Screenshot](./assets/home.png) | ![Result Screenshot](./assets/result.png) |
-
-> Replace `./assets/home.png` and `./assets/result.png` with your actual image paths
+| ![Home Screenshot](./prev.png) | ![Result Screenshot](./result.png) |
 
 ---
 
@@ -91,11 +92,18 @@ If you're using TypeScript:
 
 ```bash
 # Clone repo
-git clone https://github.com/your-username/histbytz.git
+git clone https://github.com/AshishBamba05/histbytz-app.git
 cd histbytz
 
-# Install dependencies
+# Install frontend dependencies
 npm install
 
-# Start dev server
+# Start frontend
 npm run dev
+
+# Install backend dependencies
+cd server
+npm install
+
+# Start backend
+npm start
