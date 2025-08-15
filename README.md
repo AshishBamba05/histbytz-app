@@ -4,7 +4,6 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
 🔗 **Live App:** [HistBytz](https://ashishvbamba-histbytz.netlify.app)  
-> 💡 For best performance, we recommend using **Google Chrome**.
 
 ---
 
@@ -20,7 +19,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ## 🎯 Features
 
-- 🧠 Intelligent search by word or date
+- 🧠 Intelligent, typo-tolerant search by word or date
 - 📆 Mapped to both general historical era + specific event
 - ⚡ Fast, lightweight UI with Vite + React
 - 🗄️ Dynamic event retrieval from JSON via Express API
