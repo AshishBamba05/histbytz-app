@@ -36,10 +36,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 | Styling      | HTML/CSS           |
 | Backend      | Node.js + Express  |
 | Database     | JSON               |
-
-
-
-Dev Tools	ESLint, Babel / SWC
+| Dev Tools	   | ESLint, Babel / SWC|
 ---
 
 ## 🚀 How It Works
@@ -84,7 +81,7 @@ If you're using TypeScript:
 
 | Home Page | Search Result |
 |-----------|----------------|
-| ![Home Screenshot](./prev.png) | ![Result Screenshot](./result.png) |
+| ![Home Screenshot](public/prev.png) | ![Result Screenshot](public/result.png) |
 
 ---
 
