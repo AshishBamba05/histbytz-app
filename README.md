@@ -3,6 +3,7 @@
 **Interactive Timeline Explorer for U.S. History**
 
 This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba.
+
 🔗 **Live App:** [HistBytz](https://histbytz-app.onrender.com)  
 
 ---
