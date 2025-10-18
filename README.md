@@ -1,4 +1,8 @@
-# 🕰️ HistBytz ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# 🕰️ HistBytz ![License: MIT](./LICENSE)
+
+
+
+(https://img.shields.io/badge/License-MIT-yellow.svg)
 
 **Interactive Timeline Explorer for U.S. History** 
 
