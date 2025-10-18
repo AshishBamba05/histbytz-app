@@ -1,6 +1,8 @@
 # 🕰️ HistBytz
 
-**Interactive Timeline Explorer for U.S. History**
+**Interactive Timeline Explorer for U.S. History** 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba.
 
