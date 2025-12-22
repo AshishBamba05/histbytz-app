@@ -81,14 +81,14 @@ If you're using TypeScript:
 
 ## 🖥️ Screenshots
 
-| Home Page | Search Result |
+| Home Page | Search Result (Search Bar) |
 |-----------|----------------|
-| ![Home Screenshot](public/prev.png) | ![Result Screenshot](public/result.png) |
+| ![Home Screenshot](public/prev.png) | ![Search Result Screenshot](public/result.png) |
 
 
-| Mistype Example | 
-| ------------------|
-| ![Mistype Example](public/mistype.png) |
+| Search Result (Date) | Mistype Example | 
+| ------------------|----------------------|
+                     | ![Mistype Example](public/mistype.png) |
 
 ---
 
