@@ -79,6 +79,7 @@ app.get("/api/events/:id", async (req, res) => {
 const bestSuggestion = (q) => {
   const needle = String(q || "").toLowerCase().trim();
   if (!needle) return null;
+<<<<<<< HEAD
 
   let best = null;
   let bestScore = Infinity;
@@ -136,4 +137,49 @@ app.get("*", (req, res) => {
 });
 
 
+=======
+
+  let best = null;
+  let bestScore = Infinity;
+
+  for (const term of lexicon) {
+    if (!term) continue;
+    if (term.includes(needle) || needle.includes(term)) return term;
+
+    const d = levenshtein(needle, term);
+    if (d < bestScore) {
+      bestScore = d;
+      best = term;
+    }
+  }
+
+  const maxDist = Math.max(2, Math.floor(needle.length * 0.35));
+  return bestScore <= maxDist ? best : null;
+};
+
+app.get("/api/search", async (req, res) => {
+  try {
+    const q = (req.query.q || "").trim();
+    if (!q) return res.json({ results: [], suggestion: null });
+
+    const results = await Event.find(
+      { $text: { $search: q } },
+      { score: { $meta: "textScore" } }
+    )
+      .sort({ score: { $meta: "textScore" } })
+      .limit(50)
+      .lean();
+
+    if (results.length) return res.json({ results, suggestion: null });
+
+    const suggestion = bestSuggestion(q);
+    res.json({ results: [], suggestion });
+  } catch (err) {
+    console.error("Search error:", err);
+    res.status(500).json({ results: [], suggestion: null, error: String(err?.message || err) });
+  }
+});
+
+const port = process.env.PORT || 3001;
+>>>>>>> a04fff0 (Installed moongoose. Switched to mongoDB. Got rid of FuseJS and instead using  Levenshtein DP-algorithm for suggestive matching. revamped suggestions text layout)
 app.listen(port, () => console.log(`Server on ${port}`));
