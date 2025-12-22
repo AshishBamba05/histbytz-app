@@ -5,7 +5,7 @@
 
 This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba.
 
-🔗 **Live App:** [HistBytz](https://abamba-histbytz.onrender.com/)  
+🔗 **Live App:** [HistBytz](https://abamba-histbytz-sdsq.onrender.com/)  
 
 ---
 
