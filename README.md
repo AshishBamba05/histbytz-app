@@ -38,6 +38,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 | Backend      | NodeJS + ExpressJS  |
 | Database     | NoSQL + MongoDB               |
 | Dev Tools	   | ESLint, Babel / SWC|
+| Deployment   | Render  |
 ---
 
 ## 🚀 How It Works
