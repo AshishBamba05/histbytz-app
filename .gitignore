@@ -26,3 +26,11 @@ node_modules
 dist
 .cache
 server/events.json
+
+
+# Env files
+.env
+.env.*
+!.env.example
+server/.env
+server/.env.*
