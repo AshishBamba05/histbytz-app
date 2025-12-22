@@ -84,7 +84,11 @@ If you're using TypeScript:
 | Home Page | Search Result |
 |-----------|----------------|
 | ![Home Screenshot](public/prev.png) | ![Result Screenshot](public/result.png) |
-                                      | ![Mistype Example](public/mistype.png) |
+
+
+| Mistype Example | 
+| ------------------|
+| ![Mistype Example](public/mistype.png) |
 
 ---
 
