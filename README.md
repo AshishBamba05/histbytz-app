@@ -36,7 +36,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 | Frontend     | React + Vite       |
 | Styling      | HTML/CSS           |
 | Backend      | Node.js + Express.js + Fuse.js  |
-| Database     | JSON               |
+| Database     | NoSQL + MongoDB               |
 | Dev Tools	   | ESLint, Babel / SWC|
 ---
 
