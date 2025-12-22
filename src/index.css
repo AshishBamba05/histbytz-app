@@ -148,3 +148,41 @@ input:focus {
 }
 .search-bar button:hover { filter: brightness(0.95); }
 
+
+
+
+.suggestion-card {
+  margin: 18px 0 12px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(10, 25, 55, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.suggestion-label,
+.suggestion-q {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #e5e7eb;
+  letter-spacing: 0.2px;
+}
+
+.suggestion-word {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #60a5fa;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.suggestion-word:hover {
+  filter: brightness(1.15);
+}

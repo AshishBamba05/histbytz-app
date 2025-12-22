@@ -1,90 +1,127 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
-import { specificEvents, generalPeriods } from './data/events';
 
 export default function EraView() {
   const [dateInput, setDateInput] = useState('');
   const [keywordInput, setKeywordInput] = useState('');
-  const [narratives, setNarratives] = useState([]);   // what you render
+  const [narratives, setNarratives] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
-  const [suggestion, setSuggestion] = useState(null); // "Did you mean …?"
+  const [suggestion, setSuggestion] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Optional: show everything by default
-  const allNarratives = [
-    ...Object.values(specificEvents),
-    ...generalPeriods.map(p => ({ title: p.title, narrative: p.narrative, image: p.image }))
-  ];
+  const [allEvents, setAllEvents] = useState([]);
+  const [bootError, setBootError] = useState(null);
 
-const isISODate = s => /^\d{4}-\d{2}-\d{2}$/.test(s);
+  const isISODate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
-// put these in HistBytz.jsx (replace your current versions)
+  const normalizeEvent = (e) => ({
+    title: e.title,
+    narrative: e.narrative,
+    image: e.image,
+    kind: e.kind,
+    date: e.date,
+    start: e.start,
+    end: e.end,
+    id: e.id,
+    _id: e._id,
+  });
 
-const handleSubmit = async (e, qOverride) => {
-  e?.preventDefault?.();
-  setHasSearched(true);
-  setSuggestion(null);
-  setLoading(true);
-
-  try {
-    // 1) Local date match
-    const matches = [];
-    if (isISODate(dateInput)) {
-      for (const [date, event] of Object.entries(specificEvents)) {
-        if (date === dateInput) matches.push(event);
+  useEffect(() => {
+    const boot = async () => {
+      setBootError(null);
+      try {
+        const res = await fetch('/api/events');
+        if (!res.ok) throw new Error(`GET /api/events failed: ${res.status}`);
+        const data = await res.json();
+        setAllEvents(Array.isArray(data) ? data.map(normalizeEvent) : []);
+      } catch (err) {
+        console.error(err);
+        setBootError('Failed to load events from server.');
+        setAllEvents([]);
       }
-      const d = new Date(dateInput);
-      for (const p of generalPeriods) {
-        if (d >= new Date(p.start) && d <= new Date(p.end)) {
-          matches.push({ title: p.title, narrative: p.narrative, image: p.image });
+    };
+    boot();
+  }, []);
+
+  const allNarratives = useMemo(() => allEvents, [allEvents]);
+
+  const filterByDate = (isoDate) => {
+    const d = new Date(isoDate);
+    if (Number.isNaN(d.getTime())) return [];
+
+    const matches = [];
+
+    for (const e of allEvents) {
+      if (e.kind === 'specific' && e.date === isoDate) {
+        matches.push(e);
+      }
+      if (e.kind === 'general' && e.start && e.end) {
+        const start = new Date(e.start);
+        const end = new Date(e.end);
+        if (!Number.isNaN(start.getTime()) && !Number.isNaN(end.getTime())) {
+          if (d >= start && d <= end) matches.push(e);
         }
       }
-      if (matches.length > 0) {
-        setNarratives(matches);
-        setLoading(false);
+    }
+
+    return matches;
+  };
+
+  const handleSubmit = async (e, qOverride) => {
+    e?.preventDefault?.();
+    setHasSearched(true);
+    setSuggestion(null);
+    setLoading(true);
+
+    try {
+      const date = dateInput.trim();
+      const q = (qOverride ?? keywordInput).trim();
+
+      // 1) If user provided a valid date, do date match first
+      if (isISODate(date)) {
+        const matches = filterByDate(date);
+        if (matches.length > 0) {
+          setNarratives(matches);
+          return;
+        }
+      }
+
+      // 2) If no keyword, clear results
+      if (!q) {
+        setNarratives([]);
         return;
       }
-    }
 
-    // 2) Backend fuzzy search
-    const q = (qOverride ?? keywordInput).trim();
-    if (!q) {
+      // 3) Backend fuzzy search
+      const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
+      if (!res.ok) throw new Error(`GET /api/search failed: ${res.status}`);
+      const data = await res.json();
+
+      if (data.results?.length) {
+        setNarratives(data.results.map(normalizeEvent));
+        setSuggestion(null);
+      } else if (data.suggestion) {
+        setNarratives([]);
+        setSuggestion(data.suggestion);
+      } else {
+        setNarratives([]);
+        setSuggestion(null);
+      }
+    } catch (err) {
+      console.error('Search error:', err);
       setNarratives([]);
+      setSuggestion(null);
+    } finally {
       setLoading(false);
-      return;
     }
+  };
 
-    // replace the existing fetch line
-    const res = await fetch(`/search?q=${encodeURIComponent(q)}`);
-
-    const data = await res.json();
-
-    if (data.results?.length) {
-      setNarratives(data.results);
-      setSuggestion(null);
-    } else if (data.suggestion) {
-      setNarratives([]);
-      setSuggestion(data.suggestion);
-    } else {
-      setNarratives([]);
-      setSuggestion(null);
-    }
-  } catch (err) {
-    console.error("Search error:", err);
-    setNarratives([]);
-    setSuggestion(null);
-  } finally {
-    setLoading(false);
-  }
-};
-
-const acceptSuggestion = async () => {
-  if (!suggestion) return;
-  setKeywordInput(suggestion);          // update the input box
-  await handleSubmit(null, suggestion); // search with the suggestion now
-};
-
+  const acceptSuggestion = async () => {
+    if (!suggestion) return;
+    setKeywordInput(suggestion);
+    await handleSubmit(null, suggestion);
+  };
 
   const displayList = hasSearched ? narratives : allNarratives;
 
@@ -115,36 +152,30 @@ const acceptSuggestion = async () => {
         <button type="submit">See Scene</button>
       </form>
 
+      {bootError && <p>{bootError}</p>}
       {loading && <p>Searching…</p>}
 
-      {suggestion && !loading && (
-  <p style={{ marginBottom: 12, color: '#fff' }}>
-    Did you mean{' '}
+{suggestion && !loading && (
+  <div className="suggestion-card">
+    <span className="suggestion-label">Did you mean</span>
     <button
       type="button"
       onClick={acceptSuggestion}
-      style={{
-        color: '#93c5fd',       // visible on dark bg
-        fontWeight: 700,
-        textDecoration: 'underline',
-        background: 'transparent',
-        border: 'none',
-        cursor: 'pointer',
-        padding: 0,
-        appearance: 'none',
-      }}
+      className="suggestion-word"
     >
       {suggestion}
     </button>
-    ?
-  </p>
+    <span className="suggestion-q">?</span>
+  </div>
 )}
+
+
 
 
       {displayList.length > 0 ? (
         displayList.map((narrative, idx) => (
           <motion.div
-            key={idx}
+            key={narrative._id || narrative.id || idx}
             className="story-card"
             style={{
               backgroundColor: '#1e293b',
@@ -178,7 +209,9 @@ const acceptSuggestion = async () => {
           </motion.div>
         ))
       ) : (
-        hasSearched && !loading && !suggestion && (
+        hasSearched &&
+        !loading &&
+        !suggestion && (
           <div className="no-data">
             <h2>No Data Found</h2>
             <p>Sorry, we don't have a POV story for this date or topic yet.</p>

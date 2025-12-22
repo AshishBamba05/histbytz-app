@@ -1,5 +1,6 @@
 [
   {
+    "_id": "6948e7a2fb529eeb8b443f45",
     "id": "s_1492-10-12",
     "kind": "specific",
     "date": "1492-10-12",
@@ -12,9 +13,13 @@
       "colonization",
       "exploration",
       "columbus"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.357Z",
+    "updatedAt": "2025-12-22T06:39:30.357Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f46",
     "id": "s_1763-05-07",
     "kind": "specific",
     "date": "1763-05-07",
@@ -29,9 +34,13 @@
       "colonization",
       "colonial",
       "colonization"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.358Z",
+    "updatedAt": "2025-12-22T06:39:30.358Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f47",
     "id": "s_1776-07-04",
     "kind": "specific",
     "date": "1776-07-04",
@@ -59,9 +68,13 @@
       "united states of america",
       "united states",
       "america"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.358Z",
+    "updatedAt": "2025-12-22T06:39:30.358Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f48",
     "id": "s_1777-11-15",
     "kind": "specific",
     "date": "1777-11-15",
@@ -75,9 +88,13 @@
       "thomas jefferson",
       "founding fathers",
       "james madison"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.358Z",
+    "updatedAt": "2025-12-22T06:39:30.358Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f49",
     "id": "s_1787-09-17",
     "kind": "specific",
     "date": "1787-09-17",
@@ -90,9 +107,13 @@
       "founding fathers",
       "george washington",
       "james madison"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4a",
     "id": "s_1787-10-27",
     "kind": "specific",
     "date": "1787-10-27",
@@ -104,9 +125,13 @@
       "federalist papers",
       "united states constitution",
       "founding fathers"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4b",
     "id": "s_1791-12-15",
     "kind": "specific",
     "date": "1791-12-15",
@@ -119,9 +144,13 @@
       "thomas jefferson",
       "founding fathers",
       "george washington"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4c",
     "id": "s_1798-07-14",
     "kind": "specific",
     "date": "1798-07-14",
@@ -136,9 +165,13 @@
       "free speech",
       "thomas jefferson",
       "jamed madison"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4d",
     "id": "s_1803-02-24",
     "kind": "specific",
     "date": "1803-02-24",
@@ -152,9 +185,13 @@
       "marbury v. madison",
       "scotus",
       "supreme court"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4e",
     "id": "s_1803-04-30",
     "kind": "specific",
     "date": "1803-04-30",
@@ -168,9 +205,13 @@
       "manifest destiny",
       "1803",
       "westward expansion"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f4f",
     "id": "s_1804-07-11",
     "kind": "specific",
     "date": "1804-07-11",
@@ -181,9 +222,13 @@
       "alexander hamilton",
       "aaron burr",
       "duel"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f50",
     "id": "s_1823-12-02",
     "kind": "specific",
     "date": "1823-12-02",
@@ -197,9 +242,13 @@
       "european powers",
       "latin america",
       "non-colonization"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f51",
     "id": "s_1857-03-06",
     "kind": "specific",
     "date": "1857-03-06",
@@ -213,9 +262,13 @@
       "supreme court",
       "dred scott",
       "dred scott v. sandford"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f52",
     "id": "s_1860-11-06",
     "kind": "specific",
     "date": "1860-11-06",
@@ -228,9 +281,13 @@
       "black",
       "union",
       "civil war"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f53",
     "id": "s_1861-04-12",
     "kind": "specific",
     "date": "1861-04-12",
@@ -243,9 +300,13 @@
       "black",
       "union",
       "civil war"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f54",
     "id": "s_1863-01-01",
     "kind": "specific",
     "date": "1863-01-01",
@@ -259,9 +320,13 @@
       "union",
       "slave",
       "freedom"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f55",
     "id": "s_1863-07-01",
     "kind": "specific",
     "date": "1863-07-01",
@@ -276,9 +341,13 @@
       "slave",
       "battle of gettysburg",
       "civil war"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f56",
     "id": "s_1864-11-08",
     "kind": "specific",
     "date": "1864-11-08",
@@ -292,9 +361,13 @@
       "union",
       "slave",
       "re-elected"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.359Z",
+    "updatedAt": "2025-12-22T06:39:30.359Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f57",
     "id": "s_1865-04-09",
     "kind": "specific",
     "date": "1865-04-09",
@@ -309,9 +382,13 @@
       "slave",
       "african american",
       "civil war"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f58",
     "id": "s_1865-04-15",
     "kind": "specific",
     "date": "1865-04-15",
@@ -327,9 +404,13 @@
       "confederate",
       "union",
       "slave"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f59",
     "id": "s_1865-12-06",
     "kind": "specific",
     "date": "1865-12-06",
@@ -345,9 +426,13 @@
       "african american",
       "black",
       "ratified"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5a",
     "id": "s_1917-04-06",
     "kind": "specific",
     "date": "1917-04-06",
@@ -359,9 +444,13 @@
       "world war",
       "woodrow wilson",
       "europe"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5b",
     "id": "s_1918-11-11",
     "kind": "specific",
     "date": "1918-11-11",
@@ -373,9 +462,13 @@
       "world war",
       "wilson",
       "armistice"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5c",
     "id": "s_1920-08-26",
     "kind": "specific",
     "date": "1920-08-26",
@@ -392,9 +485,13 @@
       "right to vote",
       "women voting",
       "ratified"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5d",
     "id": "s_1933-03-04",
     "kind": "specific",
     "date": "1933-03-04",
@@ -410,9 +507,13 @@
       "1933",
       "hope",
       "new deal"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5e",
     "id": "s_1941-12-07",
     "kind": "specific",
     "date": "1941-12-07",
@@ -428,9 +529,13 @@
       "roosevelt",
       "fdr",
       "pearl harbor"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f5f",
     "id": "s_1944-06-06",
     "kind": "specific",
     "date": "1944-06-06",
@@ -447,9 +552,13 @@
       "fdr",
       "d-day",
       "normandy"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f60",
     "id": "s_1945-08-06",
     "kind": "specific",
     "date": "1945-08-06",
@@ -467,9 +576,13 @@
       "ww2",
       "world war",
       "atom bomb"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f61",
     "id": "s_1945-09-02",
     "kind": "specific",
     "date": "1945-09-02",
@@ -484,9 +597,13 @@
       "oppenheimer",
       "roosevelt",
       "fdr"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f62",
     "id": "s_1954-05-17",
     "kind": "specific",
     "date": "1954-05-17",
@@ -501,9 +618,13 @@
       "black",
       "civil rights",
       "african american"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f63",
     "id": "s_1955-08-28",
     "kind": "specific",
     "date": "1955-08-28",
@@ -517,9 +638,13 @@
       "terror",
       "black",
       "african american"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f64",
     "id": "s_1955-12-01",
     "kind": "specific",
     "date": "1955-12-01",
@@ -529,9 +654,13 @@
     "keywords": [
       "montgomery bus",
       "rosa parks"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f65",
     "id": "s_1963-08-28",
     "kind": "specific",
     "date": "1963-08-28",
@@ -542,9 +671,13 @@
       "mlk",
       "dream",
       "march on washington"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f66",
     "id": "s_1963-11-22",
     "kind": "specific",
     "date": "1963-11-22",
@@ -556,9 +689,13 @@
       "john f. kennedy",
       "dallas",
       "assassination"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f67",
     "id": "s_1964-07-02",
     "kind": "specific",
     "date": "1964-07-02",
@@ -573,9 +710,13 @@
       "lyndon johnson",
       "segregation",
       "martin luther king"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f68",
     "id": "s_1968-04-04",
     "kind": "specific",
     "date": "1968-04-04",
@@ -589,9 +730,13 @@
       "tennessee",
       "assassination",
       "martin luther king jr."
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f69",
     "id": "s_1969-07-20",
     "kind": "specific",
     "date": "1969-07-20",
@@ -602,9 +747,13 @@
       "apollo 11",
       "moon",
       "neil armstrong"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6a",
     "id": "s_1973-01-22",
     "kind": "specific",
     "date": "1973-01-22",
@@ -618,9 +767,13 @@
       "supreme court",
       "1973",
       "wade"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6b",
     "id": "s_1989-11-09",
     "kind": "specific",
     "date": "1989-11-09",
@@ -637,9 +790,13 @@
       "wall",
       "1989",
       "germany"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6c",
     "id": "s_1998-12-19",
     "kind": "specific",
     "date": "1998-12-19",
@@ -650,9 +807,13 @@
       "bill clinton",
       "impeached",
       "perjury"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6d",
     "id": "s_2001-09-11",
     "kind": "specific",
     "date": "2001-09-11",
@@ -665,9 +826,13 @@
       "world trade center",
       "terror",
       "9/11"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6e",
     "id": "s_2020-03-11",
     "kind": "specific",
     "date": "2020-03-11",
@@ -678,9 +843,13 @@
       "covid-19",
       "2020",
       "pandemic"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f6f",
     "id": "g_1492-10-12_1754-05-27",
     "kind": "general",
     "start": "1492-10-12",
@@ -693,9 +862,13 @@
       "colony",
       "early america",
       "exploration"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f70",
     "id": "g_1754-05-28_1763-02-10",
     "kind": "general",
     "start": "1754-05-28",
@@ -707,9 +880,13 @@
       "seven years war",
       "fort necessity",
       "george washington"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f71",
     "id": "g_1763-02-11_1783-09-03",
     "kind": "general",
     "start": "1763-02-11",
@@ -724,9 +901,13 @@
       "yorktown",
       "thomas jefferson",
       "george washington"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f72",
     "id": "g_1783-09-04_1789-03-03",
     "kind": "general",
     "start": "1783-09-04",
@@ -739,9 +920,13 @@
       "constitution",
       "shays rebellion",
       "founding fathers"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f73",
     "id": "g_1789-03-04_1812-06-17",
     "kind": "general",
     "start": "1789-03-04",
@@ -757,9 +942,13 @@
       "john adams",
       "democratic-republicans",
       "federalists"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f74",
     "id": "g_1812-06-18_1815-02-18",
     "kind": "general",
     "start": "1812-06-18",
@@ -771,9 +960,13 @@
       "andrew jackson",
       "british invasion",
       "star spangled banner"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f75",
     "id": "g_1815-02-19_1830-05-27",
     "kind": "general",
     "start": "1815-02-19",
@@ -788,9 +981,13 @@
       "manifest destiny",
       "john quincy adams",
       "jqa"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f76",
     "id": "g_1830-05-28_1838-12-31",
     "kind": "general",
     "start": "1830-05-28",
@@ -805,9 +1002,13 @@
       "oklahoma",
       "manifest destiny",
       "trail of tears"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f77",
     "id": "g_1839-01-01_1846-04-24",
     "kind": "general",
     "start": "1839-01-01",
@@ -823,9 +1024,13 @@
       "cotton",
       "railroad",
       "frederick douglass"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f78",
     "id": "g_1846-04-25_1848-02-02",
     "kind": "general",
     "start": "1846-04-25",
@@ -839,9 +1044,13 @@
       "texas",
       "california`s gold rush",
       "manifest destiny"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.360Z",
+    "updatedAt": "2025-12-22T06:39:30.360Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f79",
     "id": "g_1848-02-03_1852-12-31",
     "kind": "general",
     "start": "1848-02-03",
@@ -854,9 +1063,13 @@
       "millard fillmore",
       "slavery",
       "sectionalism"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7a",
     "id": "g_1853-01-01_1857-03-05",
     "kind": "general",
     "start": "1853-01-01",
@@ -869,9 +1082,13 @@
       "stephen douglas",
       "republican party",
       "border ruffians"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7b",
     "id": "g_1857-03-06_1860-11-05",
     "kind": "general",
     "start": "1857-03-06",
@@ -884,9 +1101,13 @@
       "john brown",
       "harpers ferry",
       "secession"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7c",
     "id": "g_1860-11-06_1865-04-15",
     "kind": "general",
     "start": "1860-11-06",
@@ -900,9 +1121,13 @@
       "gettysburg",
       "confederacy",
       "confederates"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7d",
     "id": "g_1865-04-16_1877-03-04",
     "kind": "general",
     "start": "1865-04-16",
@@ -921,9 +1146,13 @@
       "white supremacy",
       "poll taxes",
       "literacy tests"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7e",
     "id": "g_1877-03-05_1914-07-27",
     "kind": "general",
     "start": "1877-03-05",
@@ -938,9 +1167,13 @@
       "progressivism",
       "railroad",
       "rutherford b hayes"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f7f",
     "id": "g_1914-07-28_1918-11-11",
     "kind": "general",
     "start": "1914-07-28",
@@ -956,9 +1189,13 @@
       "woodrow wilson",
       "treaty of versailles",
       "world war 1"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f80",
     "id": "g_1929-10-29_1939-09-01",
     "kind": "general",
     "start": "1929-10-29",
@@ -973,9 +1210,13 @@
       "new deal",
       "hooverville",
       "herbert hoover"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f81",
     "id": "g_1939-09-01_1945-09-02",
     "kind": "general",
     "start": "1939-09-01",
@@ -994,9 +1235,13 @@
       "world war 2",
       "japanese internment camps",
       "franklin d roosevelt"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f82",
     "id": "g_1947-03-12_1957-12-31",
     "kind": "general",
     "start": "1947-03-12",
@@ -1009,9 +1254,13 @@
       "truman doctrine",
       "iron curtain",
       "red scare"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f83",
     "id": "g_1958-01-01_1964-12-31",
     "kind": "general",
     "start": "1958-01-01",
@@ -1026,9 +1275,13 @@
       "civil rights",
       "freedom rides",
       "cold war"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f84",
     "id": "g_1965-01-01_1975-04-30",
     "kind": "general",
     "start": "1965-01-01",
@@ -1046,9 +1299,13 @@
       "cold war",
       "lyndon b johnson",
       "martin luther king jr."
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f85",
     "id": "g_1945-09-03_2000-12-31",
     "kind": "general",
     "start": "1945-09-03",
@@ -1061,9 +1318,13 @@
       "moon landing",
       "ronald reagan",
       "tech boom"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f86",
     "id": "g_2001-01-01_2020-03-11",
     "kind": "general",
     "start": "2001-01-01",
@@ -1077,9 +1338,13 @@
       "recession",
       "technology",
       "bush"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f87",
     "id": "g_2020-03-12_2021-01-31",
     "kind": "general",
     "start": "2020-03-12",
@@ -1091,9 +1356,13 @@
       "2020",
       "pandemic",
       "coronavirus"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   },
   {
+    "_id": "6948e7a2fb529eeb8b443f88",
     "id": "g_2021-01-01_2025-12-31",
     "kind": "general",
     "start": "2021-01-01",
@@ -1106,6 +1375,9 @@
       "ai",
       "inflation",
       "2020s"
-    ]
+    ],
+    "__v": 0,
+    "createdAt": "2025-12-22T06:39:30.361Z",
+    "updatedAt": "2025-12-22T06:39:30.361Z"
   }
 ]
