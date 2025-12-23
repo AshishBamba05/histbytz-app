@@ -103,7 +103,6 @@ npm install
 # 2) Environment variables (create in project root)
 # .env
 MONGODB_URI="your_mongodb_connection_string"
-# PORT=5000   # optional
 
 # 3) Start backend (Terminal 1)
 npm start
