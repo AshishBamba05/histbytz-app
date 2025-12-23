@@ -36,9 +36,9 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 | **Frontend**     | ReactJS + Vite       |
 | **Styling**      | HTML/CSS           |
 | **Backend**     | NodeJS + ExpressJS  |
-| Database     | NoSQL + MongoDB               |
-| Dev Tools	   | ESLint, Babel / SWC|
-| Deployment   | Render  |
+| **Database**     | NoSQL + MongoDB               |
+| **Dev Tools**	   | ESLint, Babel / SWC|
+| **Deployment**   | Render  |
 ---
 
 ## 🚀 How It Works
