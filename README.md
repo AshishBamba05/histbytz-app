@@ -17,7 +17,7 @@ This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba
 
 The app maps your input to a **relevant historical period** and a **specific U.S. event**, providing clear, concise context.
 
-**IMPORTANT UPDATE**: Our app can now provide intelligent "Did you mean?" suggestions to reroute user's request in case of keyword mistypes in search bar.
+**NEW**: HistBytz can now provide intelligent "Did you mean?" suggestions to reroute user's request in case of keyword mistypes in search bar.
 
 ---
 
