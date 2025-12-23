@@ -19,7 +19,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ---
 
-## 🎯 Features
+## 🎯 Core Features
 
 - 🧠 Intelligent, typo-tolerant search by word or date
 - 📆 Mapped to both general historical era + specific event
