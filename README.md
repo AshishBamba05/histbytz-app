@@ -24,7 +24,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 - 🧠 Intelligent, typo-tolerant search by word or date
 - 📆 Mapped to both general historical era + specific event
 - ⚡ Fast, lightweight UI with Vite + React
-- 🗄️ Dynamic event retrieval from JSON via Express API
+- 🗄️ Dynamic event retrieval from MongoDB-backed NoSQL via Express API
 - 🧭 Educational for students, teachers, and trivia lovers
 
 ---
