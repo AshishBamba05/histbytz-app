@@ -11,7 +11,7 @@ This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba
 
 ## 📌 Overview
 
-**HistBytz** is a full-stack interactive history explorer built with ReactJS + Vite on the frontend and NodeJS + ExpressJS on the backend. Users can search historical events by keyword or date, and the backend dynamically retrieves matching results from a MongoDB-backed NoSQL dataset. 
+**HistBytz** is a full-stack interactive history explorer built with ReactJS + Vite on the frontend and NodeJS + ExpressJS on the backend. Users can search key historical events occurring between 1492 and 2025 by keyword or date, and the backend dynamically retrieves matching results from a MongoDB-backed NoSQL dataset. 
 - 🔤 **Keyword search**: e.g., "civil rights", "World War"
 - 📅 **Date search**: e.g., "7/4/1776", "4/09/1865"
 
