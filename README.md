@@ -88,7 +88,7 @@ If you're using TypeScript:
 
 | Search Result (Date) | Mistype Example | 
 | ------------------|----------------------|
-|  ![Search Result Screenshot (Dates)](public/date.png) | ![Mistype Example](public/mistype.png) |
+|  ![Search Result Screenshot (Dates)](public/date.png) | ![Mistyped Input In Search Bar Example](public/mistype.png) |
 
 ---
 
