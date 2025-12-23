@@ -92,22 +92,22 @@ If you're using TypeScript:
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Running Locally
 
 ```bash
-# Clone repo
+# 1) Clone + install
 git clone https://github.com/AshishBamba05/histbytz-app.git
 cd histbytz
-
-# Install frontend dependencies
 npm install
 
-# Start frontend
+# 2) Environment variables (create in project root)
+# .env
+MONGODB_URI="your_mongodb_connection_string"
+# PORT=5000   # optional
+
+# 3) Start backend (Terminal 1)
+npm start
+
+# 4) Start frontend (Terminal 2)
 npm run dev
 
-# Install backend dependencies
-cd server
-npm install
-
-# Start backend
-npm start
