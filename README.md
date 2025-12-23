@@ -94,7 +94,7 @@ If you're using TypeScript:
 
 ## 📦 Installation & Running Locally
 
-# 1) Clone + install
+### 1) Clone + install
 
 ```bash
 git clone https://github.com/AshishBamba05/histbytz-app.git
@@ -102,18 +102,18 @@ cd histbytz
 npm install
 ```
 
-# 2) Environment variables (create in project root)
+### 2) Environment variables (create in project root)
 Create a .env file in the project root:
 ```
 MONGODB_URI="your_mongodb_connection_string"
 
 ```
-# 3) Start backend (Terminal 1)
+### 3) Start backend (Terminal 1)
 ```
 npm start
 ```
 
-# 4) Start frontend (Terminal 2)
+### 4) Start frontend (Terminal 2)
 ```
 npm run dev
 ```
