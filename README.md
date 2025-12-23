@@ -83,7 +83,7 @@ If you're using TypeScript:
 
 | Home Page | Search Result (Search Bar) |
 |-----------|----------------|
-| ![Home Screenshot](public/prev.png) | ![Search Result Screenshot (Search Bar) ](public/results.png) |
+| ![Home Screenshot](public/prev.png) | ![Search Result Screenshot (Search Bar) ](public/searchResult.png) |
 
 
 | Search Result (Date) | Mistype Example | 
