@@ -23,7 +23,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ## 🎯 Core Features
 
-- 🧠 Intelligent suggestions powered by Levenshtein's DP-based algorithm for fuzzy matching
+- 🧠 Intelligent "Did you mean?" suggestions powered by Levenshtein's DP-based algorithm
 - 📆 Mapped to both general historical era + specific event
 - ⚡ Fast, lightweight UI with Vite + React
 - 🗄️ Dynamic event retrieval from MongoDB-backed NoSQL dataset via Express API
