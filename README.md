@@ -15,10 +15,9 @@ This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba
 - 🔤 **Keyword search**: e.g., "civil rights", "World War"
 - 📅 **Date search**: e.g., "7/4/1776", "4/09/1865"
 
-**IMPORTANT UPDATE**: Our app can now provide intelligent "Did you mean?" suggestions to reroute user's request in case of keyword mistypes in search bar.
-
 The app maps your input to a **relevant historical period** and a **specific U.S. event**, providing clear, concise context.
 
+**IMPORTANT UPDATE**: Our app can now provide intelligent "Did you mean?" suggestions to reroute user's request in case of keyword mistypes in search bar.
 ---
 
 ## 🎯 Core Features
