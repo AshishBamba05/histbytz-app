@@ -107,8 +107,8 @@ Create a .env file in the project root:
 ```
 MONGODB_URI="your_mongodb_connection_string"
 PORT = <Enter Port Number>
-
 ```
+
 ### 3) Start backend (Terminal 1)
 ```
 npm start
