@@ -16,13 +16,11 @@ This project is licensed under the [MIT License](./LICENSE) © 2025 Ashish Bamba
 
 The app maps your input to a **relevant historical period** and a **specific U.S. event**, providing clear, concise context.
 
-**NEW**: Histora can now provide intelligent "Did you mean?" suggestions to reroute user's request in case of keyword mistypes in search bar.
-
 ---
 
 ## 🎯 Core Features
 
-- 🧠 Intelligent "Did you mean?" suggestions powered by Levenshtein's DP-based algorithm
+- 🧠 Intelligent "Did you mean?" suggestions powered by Levenshtein's dynamic programming algorithm
 - 📆 Mapped to both general historical era + specific event
 - ⚡ Fast, lightweight UI with Vite + React
 - 🗄️ Dynamic event retrieval from MongoDB-backed NoSQL dataset via Express API
