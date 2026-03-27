@@ -98,8 +98,8 @@ If you're using TypeScript:
 ### 1) Clone + install
 
 ```bash
-git clone https://github.com/AshishBamba05/histbytz-app.git
-cd histbytz
+git clone https://github.com/AshishBamba05/histora.git
+cd histora
 npm install
 ```
 
