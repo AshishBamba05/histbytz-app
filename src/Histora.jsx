@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
 
-export default function EraView() {
+export default function Histora() {
   const [dateInput, setDateInput] = useState('');
   const [keywordInput, setKeywordInput] = useState('');
   const [narratives, setNarratives] = useState([]);
@@ -172,42 +172,42 @@ export default function EraView() {
 
 
 
-      {displayList.length > 0 ? (
-        displayList.map((narrative, idx) => (
-          <motion.div
-            key={narrative._id || narrative.id || idx}
-            className="story-card"
-            style={{
-              backgroundColor: '#1e293b',
-              padding: '1.5rem',
-              borderRadius: '12px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
-              marginBottom: '1.5rem',
-              transition: 'transform 0.2s ease',
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.6, delay: idx * 0.1 }}
-          >
-            <h2>{narrative.title}</h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-              {narrative.image && (
-                <img
-                  src={narrative.image}
-                  alt={narrative.title}
-                  style={{
-                    maxWidth: '250px',
-                    borderRadius: '8px',
-                    objectFit: 'cover',
-                    flexShrink: 0,
-                  }}
-                />
-              )}
-              <p style={{ flex: 1 }}>{narrative.narrative}</p>
-            </div>
-          </motion.div>
-        ))
+  {displayList.length > 0 ? (
+    displayList.map((narrative, idx) => (
+      <motion.div
+        key={narrative._id || narrative.id || idx}
+        className="story-card"
+        style={{
+          backgroundColor: '#1e293b',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+          marginBottom: '1.5rem',
+          transition: 'transform 0.2s ease',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.6, delay: idx * 0.1 }}
+      >
+        <h2>{narrative.title}</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+          {narrative.image && (
+            <img
+              src={narrative.image}
+              alt={narrative.title}
+              style={{
+                maxWidth: '250px',
+                borderRadius: '8px',
+                objectFit: 'cover',
+                flexShrink: 0,
+              }}
+            />
+          )}
+          <p style={{ flex: 1 }}>{narrative.narrative}</p>
+        </div>
+      </motion.div>
+      ))
       ) : (
         hasSearched &&
         !loading &&
