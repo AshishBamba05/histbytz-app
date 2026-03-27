@@ -128,7 +128,7 @@ export default function EraView() {
   return (
     <div className="container">
       <div className="header" style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <h1 className="flag-text">HistBytz</h1>
+        <h1 className="flag-text">Histora</h1>
         <p className="small-flag">
           Every era has a story—step into it. <br />
           Search a date. Enter the scene.
