@@ -62,7 +62,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ### Key Files
 
-`src/` : Frontend React App
+[`src/`](https://github.com/AshishBamba05/histora/tree/main/src) : Frontend React App
 - `src/Histora.jsx` — Main search interface and result rendering logic
 - `src/App.jsx` — App shell and page layout
 
