@@ -77,8 +77,11 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 ## Scenario Walkthrough
 
 Case #1: The user types in a valid date but leaves the keyword section blank.
+
 Case #2: The user leaves the date filter empty but instead types in a valid keyword.
+
 Case #3: The user fills in both filters.
+
 Case #4: The user types nothing and hits search.
 
 ## 🖥️ Screenshots of Correctness
