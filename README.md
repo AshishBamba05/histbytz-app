@@ -102,7 +102,7 @@ npm install
 ```
 
 ### 2) Environment variables (create in server/)
-Create a .env file in the project root:
+Create a `.env` file in the project root:
 ```
 MONGODB_URI="your_mongodb_connection_string"
 PORT = <Enter Port Number>
@@ -116,12 +116,16 @@ PORT = <Enter Port Number>
 5. Click **Connect → Drivers** and copy the connection string
 6. Replace `<password>` with your actual password (i.e. the connection string)
 
-### 3) Start backend (Terminal 1)
+### 3) Run Application Through NPM (Node Package Manager):
+
+Open `Split Terminal` then run the following commands:
+
+#### Start backend (Terminal 1)
 ```
 npm start
 ```
 
-### 4) Start frontend (Terminal 2)
+#### Start frontend (Terminal 2)
 ```
 npm run dev
 ```
