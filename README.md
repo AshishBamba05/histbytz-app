@@ -71,7 +71,9 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 - `server/seed.mjs` — Seeds event data into MongoDB
 
 
-## 🖥️ Screenshots
+## Logic Walkthrough
+
+## 🖥️ Screenshots of Correctness
 
 | Home Page | Search Result (Search Bar) |
 |-----------|----------------|
