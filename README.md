@@ -116,7 +116,7 @@ PORT = <Enter Port Number>
 5. Click **Connect → Drivers** and copy the connection string
 6. Replace `<password>` with your actual password (i.e. the connection string)
 
-#### Security Note
+#### Security Note:
 Do NOT commit your `.env` file. It contains sensitive credentials like your MongoDB URI.
 
 Ensure `.env` is listed in your `.gitignore`.
