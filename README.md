@@ -84,7 +84,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 **Case #4: The user types nothing and hits search.**
 
-## 🖥️ Screenshots of Correctness
+## 🖥️ Black-Box Testing
 
 | Home Page | Search Result (Search Bar) |
 |-----------|----------------|
