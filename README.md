@@ -57,6 +57,15 @@ The app maps your input to a **relevant historical period** and a **specific U.S
   
 ## Project Structure
 
+### Key Files
+
+- `src/Histora.jsx` — Main search interface and result rendering logic
+- `src/App.jsx` — App shell and page layout
+- `server/server.js` — Express server, API routes, search handling, and suggestion logic
+- `server/models/Event.js` — MongoDB schema and text indexes for historical events
+- `server/db.js` — Database connection setup
+- `server/build-events.mjs` — Builds normalized event data for seeding
+- `server/seed.mjs` — Seeds event data into MongoDB
 
 
 ## 🖥️ Screenshots
