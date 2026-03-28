@@ -108,7 +108,7 @@ MONGODB_URI="your_mongodb_connection_string"
 PORT = <Enter Port Number>
 ```
 
-### To get your MongoDB connection string:
+#### To get your MongoDB connection string:
 1. Go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
 2. Create a free cluster
 3. Create a database user (username + password)
