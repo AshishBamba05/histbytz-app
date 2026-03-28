@@ -114,7 +114,7 @@ PORT = <Enter Port Number>
 3. Create a database user (username + password)
 4. Add your IP address to the access list
 5. Click **Connect → Drivers** and copy the connection string
-6. Replace `<password>` with your actual password
+6. Replace `<password>` with your actual password (i.e. the connection string)
 
 ### 3) Start backend (Terminal 1)
 ```
