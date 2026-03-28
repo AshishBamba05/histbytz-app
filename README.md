@@ -86,11 +86,14 @@ All events are pre-loaded because we call an API (/api/events) to diplay **ALL**
 
 No search API gets called, instead: 
 
-The frontend React component parses through all the events pre-loaded ffrom the initial API call, and it keeps the events that match the date input.
+The frontend React component parses through all the events pre-loaded from the initial API call, and it keeps the events that match the date input.
 
 
 
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
+
+Since the date field is empty, the date matching branch is skipped and we look at keyword filter. 
+
 
 
 
