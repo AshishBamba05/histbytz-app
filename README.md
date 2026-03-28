@@ -91,7 +91,7 @@ The frontend React component parses through all the events pre-loaded from the i
 
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
-Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend, we call `fetch('/api/search?q=...')`, which sends a GET request to the `/api/search` endpoint.
+Since the date field is empty, the date matching branch is skipped and we look at keyword filter. On the React frontend, we call `fetch('/api/search?q=...')`, which sends a `GET` request to the `/api/search` endpoint.
 
 
 
