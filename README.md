@@ -46,7 +46,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
    - One for **keywords**
    - One for **dates**
 
-**NOTE**: Only one of these search filters is required to be filled in with a valid entry. If both search filters are filled via valid inputs, Histora will default to retrieving events pertaining to given date.
+**NOTE**: Only one of these search filters is required to be filled in with a valid entry. If both search filters are filled via valid inputs, Histora will only consider date entry during event retrieval.
 
 2. The search input is mapped to:
    - A **broad U.S. time period**
