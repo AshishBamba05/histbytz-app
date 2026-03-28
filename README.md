@@ -76,13 +76,15 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ## 🧭 Scenario Walkthrough
 
-**Case #1: The user types in a valid date but leaves the keyword section blank.**
+**Case #1**: The user lands on page and hasn't searched anything (yet). 
 
-**Case #2: The user leaves the date filter empty but instead types in a valid keyword.**
+**Case #2: The user types in a valid date but leaves the keyword section blank.**
 
-**Case #3: The user fills in both filters.**
+**Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
-**Case #4: The user types nothing and hits search.**
+**Case #4: The user fills in both filters.**
+
+**Case #5: The user types nothing and hits search.**
 
 ## 🖥️ Black-Box Testing
 
