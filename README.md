@@ -116,16 +116,21 @@ PORT = <Enter Port Number>
 5. Click **Connect → Drivers** and copy the connection string
 6. Replace `<password>` with your actual password (i.e. the connection string)
 
+#### Security Note
+Do NOT commit your `.env` file. It contains sensitive credentials like your MongoDB URI.
+
+Ensure `.env` is listed in your `.gitignore`.
+
 ### 3) Run Application Through NPM (Node Package Manager):
 
 Open `Split Terminal` then run the following commands:
 
-#### Start backend (Terminal 1)
+#### Activate backend (Terminal 1)
 ```
 npm start
 ```
 
-#### Start frontend (Terminal 2)
+#### Activate frontend (Terminal 2)
 ```
 npm run dev
 ```
