@@ -57,29 +57,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
   
 ## Project Structure
 
----
 
-## 🧩 Vite + React Setup
-
-This project uses [Vite](https://vitejs.dev/) for blazing-fast dev with HMR.
-
-### 🔌 Plugins Used
-
-- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) (Babel-based)
-- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) (SWC-based)
-
-Both support **Fast Refresh** during development.
-
----
-
-## ✅ Linting & TypeScript Support
-
-If you're using TypeScript:
-
-- Use [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) for **type-aware linting**
-- Template to get started: [React TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
-
----
 
 ## 🖥️ Screenshots
 
@@ -137,3 +115,28 @@ npm start
 ```
 npm run dev
 ```
+
+
+---
+
+## 🧩 Vite + React Setup
+
+This project uses [Vite](https://vitejs.dev/) for blazing-fast dev with HMR.
+
+### 🔌 Plugins Used
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) (Babel-based)
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) (SWC-based)
+
+Both support **Fast Refresh** during development.
+
+---
+
+## ✅ Linting & TypeScript Support
+
+If you're using TypeScript:
+
+- Use [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) for **type-aware linting**
+- Template to get started: [React TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
+
+---
