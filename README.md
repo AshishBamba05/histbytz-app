@@ -78,9 +78,11 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 **Case #1: The user lands on page and hasn't searched anything (yet).**
 
-All events are pre-loaded because we call an API (/api/events) to diplay **ALL** events. When the frontend React component calls `fetch('/api/events')` in src/Histora.jsx, that request goes through 
+All events are pre-loaded because we call an API (/api/events) to diplay **ALL** events. When the frontend React component calls `fetch('/api/events')` in src/Histora.jsx, that request is routed through Express server in server/server.js, and returns a MongoDB query in JSON format.
 
 **Case #2: The user types in a valid date but leaves the keyword section blank.**
+
+No search API gets called, instead: 
 
 **Case #3: The user leaves the date filter empty but instead types in a valid keyword.**
 
