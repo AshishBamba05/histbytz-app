@@ -108,6 +108,9 @@ MONGODB_URI="your_mongodb_connection_string"
 PORT = <Enter Port Number>
 ```
 
+To have a MongoDB connection string, please create a valid MongoDB cluster that you can connect this application to. 
+Here's a link to do that: https://www.mongodb.com/
+
 ### 3) Start backend (Terminal 1)
 ```
 npm start
