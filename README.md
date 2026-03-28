@@ -59,8 +59,11 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 
 ### Key Files
 
+`src/`
 - `src/Histora.jsx` — Main search interface and result rendering logic
 - `src/App.jsx` — App shell and page layout
+
+`server/`
 - `server/server.js` — Express server, API routes, search handling, and suggestion logic
 - `server/models/Event.js` — MongoDB schema and text indexes for historical events
 - `server/db.js` — Database connection setup
