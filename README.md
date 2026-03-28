@@ -108,8 +108,13 @@ MONGODB_URI="your_mongodb_connection_string"
 PORT = <Enter Port Number>
 ```
 
-To have a MongoDB connection string, please create a valid MongoDB cluster that you can connect this application to. 
-Here's a link to do that: https://www.mongodb.com/
+### To get your MongoDB connection string:
+1. Go to [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
+2. Create a free cluster
+3. Create a database user (username + password)
+4. Add your IP address to the access list
+5. Click **Connect → Drivers** and copy the connection string
+6. Replace `<password>` with your actual password
 
 ### 3) Start backend (Terminal 1)
 ```
