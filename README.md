@@ -45,6 +45,9 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 1. The app has **two search engines**:
    - One for **keywords**
    - One for **dates**
+
+**NOTE**: Only one of these search filters is required to be filled in with a valid entry. If both search filters are filled via valid inputs, Histora will default to retrieving events pertaining to given date.
+
 2. The search input is mapped to:
    - A **broad U.S. time period**
    - A **specific historical event**
@@ -71,7 +74,9 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 - `server/seed.mjs` — Seeds event data into MongoDB
 
 
-## Logic Walkthrough
+## Scenario Walkthrough
+
+Case #1: The user types in a valid date but leaves the keyword section blank.
 
 ## 🖥️ Screenshots of Correctness
 
