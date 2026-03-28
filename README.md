@@ -58,7 +58,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
    - Contextual notes
 
   
-## Project Structure
+## 🏗️ Project Structure
 
 ### Key Files
 
@@ -74,7 +74,7 @@ The app maps your input to a **relevant historical period** and a **specific U.S
 - `server/seed.mjs` — Seeds event data into MongoDB
 
 
-## Scenario Walkthrough
+## 🧭 Scenario Walkthrough
 
 Case #1: The user types in a valid date but leaves the keyword section blank.
 
